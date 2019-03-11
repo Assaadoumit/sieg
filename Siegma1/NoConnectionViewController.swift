@@ -7,24 +7,33 @@
 //
 
 import UIKit
+import SystemConfiguration
+import Alamofire
+import Reachability
 
 class NoConnectionViewController: UIViewController {
-
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func TryAgain(_ sender: Any) {
+//        performSegue(withIdentifier: "TryAgain", sender: nil)
+        if (currentReachabilityStatus != .notReachable ){
+            performSegue(withIdentifier: "TryAgain", sender: nil)
+//            WebViewController().openWeb()
+            print("connected to internet")
+        }
+        else{
+            print("not connected to internet")
+            OperationQueue.main.addOperation {
+//          self.performSegue(withIdentifier: "NoInternet" , sender: nil)
+            super.viewDidAppear(true)
+            }
+        }
     }
-    */
-
 }
+
+

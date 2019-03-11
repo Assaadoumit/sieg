@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--No Connection View Controller-->
+        <scene sceneID="fAw-kr-UEN">
+            <objects>
+                <viewController storyboardIdentifier="LostConnection" id="oto-Iq-apd" customClass="NoConnectionViewController" customModule="Siegma1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Twf-qH-AXa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-Hl-9aH">
+                                <rect key="frame" x="93" y="222" width="189" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="EgC-rl-qCN"/>
+                                    <constraint firstAttribute="height" constant="167" id="a2R-cl-MNq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lost Internet Connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-G9-pR7">
+                                <rect key="frame" x="60" y="483" width="255" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="AaE-l1-p8X"/>
+                                    <constraint firstAttribute="width" constant="255" id="p6l-Ey-2eZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mza-ud-Ffc">
+                                <rect key="frame" x="113" y="641" width="149" height="35"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="VyO-GI-AjT"/>
+                                    <constraint firstAttribute="height" constant="35" id="ggb-kF-buA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="TryAgain:" destination="oto-Iq-apd" eventType="touchUpInside" id="Kce-1x-hCM"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="TryAgain" id="dt3-yn-zsP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mza-ud-Ffc" firstAttribute="top" secondItem="HOY-G9-pR7" secondAttribute="bottom" constant="129" id="0AF-lc-8J7"/>
+                            <constraint firstItem="Sei-C7-x7M" firstAttribute="trailing" secondItem="Mza-ud-Ffc" secondAttribute="trailing" constant="113" id="5KC-su-umB"/>
+                            <constraint firstItem="gRk-Hl-9aH" firstAttribute="leading" secondItem="Sei-C7-x7M" secondAttribute="leading" constant="93" id="9LX-f8-VO9"/>
+                            <constraint firstItem="Mza-ud-Ffc" firstAttribute="top" secondItem="HOY-G9-pR7" secondAttribute="bottom" constant="129" id="B7V-1Q-8KE"/>
+                            <constraint firstItem="HOY-G9-pR7" firstAttribute="centerX" secondItem="Twf-qH-AXa" secondAttribute="centerX" id="GNk-LP-TCo"/>
+                            <constraint firstItem="gRk-Hl-9aH" firstAttribute="centerX" secondItem="Twf-qH-AXa" secondAttribute="centerX" id="QCH-Md-tP0"/>
+                            <constraint firstItem="HOY-G9-pR7" firstAttribute="top" secondItem="gRk-Hl-9aH" secondAttribute="bottom" constant="94" id="T2j-i2-9vm"/>
+                            <constraint firstItem="Sei-C7-x7M" firstAttribute="bottom" secondItem="Mza-ud-Ffc" secondAttribute="bottom" constant="102" id="V9G-Ei-DMF"/>
+                            <constraint firstItem="HOY-G9-pR7" firstAttribute="leading" secondItem="Sei-C7-x7M" secondAttribute="leading" constant="60" id="VqT-dh-rO2"/>
+                            <constraint firstItem="Sei-C7-x7M" firstAttribute="trailing" secondItem="gRk-Hl-9aH" secondAttribute="trailing" constant="93" id="dMd-yD-VgQ"/>
+                            <constraint firstItem="Mza-ud-Ffc" firstAttribute="leading" secondItem="Sei-C7-x7M" secondAttribute="leading" constant="113" id="fvc-ty-cnF"/>
+                            <constraint firstItem="Sei-C7-x7M" firstAttribute="trailing" secondItem="HOY-G9-pR7" secondAttribute="trailing" constant="60" id="lug-W0-L21"/>
+                            <constraint firstItem="Mza-ud-Ffc" firstAttribute="centerX" secondItem="Twf-qH-AXa" secondAttribute="centerX" id="mfR-Q0-fks"/>
+                            <constraint firstItem="HOY-G9-pR7" firstAttribute="top" secondItem="gRk-Hl-9aH" secondAttribute="bottom" constant="94" id="nzT-oG-0og"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sei-C7-x7M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pT8-Y6-q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="429"/>
+        </scene>
+        <!--Web View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainStoryboard" id="BYZ-38-t0r" customClass="WebViewController" customModule="Siegma1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8R-lC-nlM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="n8R-lC-nlM" secondAttribute="trailing" id="Lhj-7P-BHa"/>
+                            <constraint firstItem="n8R-lC-nlM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PCX-Zi-oSK"/>
+                            <constraint firstAttribute="bottom" secondItem="n8R-lC-nlM" secondAttribute="bottom" id="m9t-ub-v7v"/>
+                            <constraint firstItem="n8R-lC-nlM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wfB-i0-Led"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zHj-VM-63K"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SkK-V7-HMT"/>
+                    <connections>
+                        <outlet property="webView" destination="n8R-lC-nlM" id="8uw-SB-8KQ"/>
+                        <segue destination="oto-Iq-apd" kind="show" identifier="NoInternet" id="i44-7x-yBP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1852" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image-1" width="200" height="200"/>
+    </resources>
 </document>
