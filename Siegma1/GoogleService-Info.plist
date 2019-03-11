@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>275207750961-iipgchnqttmmm3g9d2q9js1f8o52bbut.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.275207750961-iipgchnqttmmm3g9d2q9js1f8o52bbut</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAflLlNhFZPrq8ZakvPYC_SJu7z3woA99w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>275207750961</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.assaad.Siegma1</string>
+	<key>PROJECT_ID</key>
+	<string>siegma1-87e30</string>
+	<key>STORAGE_BUCKET</key>
+	<string>siegma1-87e30.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:275207750961:ios:b2c37f388b8c087a</string>
+	<key>DATABASE_URL</key>
+	<string>https://siegma1-87e30.firebaseio.com</string>
+</dict>
+</plist>
