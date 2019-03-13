@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,18 @@
             <objects>
                 <viewController storyboardIdentifier="LostConnection" id="oto-Iq-apd" customClass="NoConnectionViewController" customModule="Siegma1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Twf-qH-AXa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-Hl-9aH">
-                                <rect key="frame" x="93" y="222" width="189" height="167"/>
+                                <rect key="frame" x="93" y="111" width="189" height="167"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="EgC-rl-qCN"/>
                                     <constraint firstAttribute="height" constant="167" id="a2R-cl-MNq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lost Internet Connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-G9-pR7">
-                                <rect key="frame" x="60" y="483" width="255" height="29"/>
+                                <rect key="frame" x="60" y="372" width="255" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="AaE-l1-p8X"/>
                                     <constraint firstAttribute="width" constant="255" id="p6l-Ey-2eZ"/>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mza-ud-Ffc">
-                                <rect key="frame" x="113" y="641" width="149" height="35"/>
+                                <rect key="frame" x="113" y="530" width="149" height="35"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="149" id="VyO-GI-AjT"/>
@@ -71,46 +71,74 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sei-C7-x7M"/>
                     </view>
+                    <connections>
+                        <outlet property="view" destination="Twf-qH-AXa" id="PJw-8W-UXW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pT8-Y6-q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="429"/>
+            <point key="canvasLocation" x="3354" y="412"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainStoryboard" id="BYZ-38-t0r" customClass="WebViewController" customModule="Siegma1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="BYZ-38-t0r" customClass="WebViewController" customModule="Siegma1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8R-lC-nlM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            <webView contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8R-lC-nlM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFh-Lj-JFO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="siegma" translatesAutoresizingMaskIntoConstraints="NO" id="lFK-3J-LeZ">
+                                        <rect key="frame" x="12" y="209" width="350" height="263"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="cUq-DA-NFb"/>
+                                            <constraint firstAttribute="width" constant="350" id="wcB-o1-qb7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lFK-3J-LeZ" firstAttribute="leading" secondItem="PFh-Lj-JFO" secondAttribute="leadingMargin" constant="4" id="BQu-9o-1Ko"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="lFK-3J-LeZ" secondAttribute="bottom" constant="167" id="BgQ-oQ-wak"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="lFK-3J-LeZ" secondAttribute="trailing" constant="5" id="h1B-5Q-fZ7"/>
+                                    <constraint firstItem="lFK-3J-LeZ" firstAttribute="top" secondItem="PFh-Lj-JFO" secondAttribute="topMargin" constant="201" id="rlT-VQ-gtL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="n8R-lC-nlM" secondAttribute="trailing" id="Lhj-7P-BHa"/>
-                            <constraint firstItem="n8R-lC-nlM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PCX-Zi-oSK"/>
-                            <constraint firstAttribute="bottom" secondItem="n8R-lC-nlM" secondAttribute="bottom" id="m9t-ub-v7v"/>
-                            <constraint firstItem="n8R-lC-nlM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wfB-i0-Led"/>
+                            <constraint firstItem="n8R-lC-nlM" firstAttribute="trailing" secondItem="zHj-VM-63K" secondAttribute="trailing" id="2Jl-fc-wH9"/>
+                            <constraint firstItem="PFh-Lj-JFO" firstAttribute="leading" secondItem="zHj-VM-63K" secondAttribute="leading" id="5o4-4g-olg"/>
+                            <constraint firstItem="n8R-lC-nlM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6t6-8K-dqk"/>
+                            <constraint firstItem="PFh-Lj-JFO" firstAttribute="top" secondItem="zHj-VM-63K" secondAttribute="top" id="9KZ-5C-C9J"/>
+                            <constraint firstAttribute="bottom" secondItem="n8R-lC-nlM" secondAttribute="bottom" id="HxE-J3-YGQ"/>
+                            <constraint firstAttribute="bottom" secondItem="PFh-Lj-JFO" secondAttribute="bottom" id="Vsv-eM-3wj"/>
+                            <constraint firstItem="n8R-lC-nlM" firstAttribute="leading" secondItem="zHj-VM-63K" secondAttribute="leading" id="YwI-UJ-caP"/>
+                            <constraint firstItem="PFh-Lj-JFO" firstAttribute="trailing" secondItem="zHj-VM-63K" secondAttribute="trailing" id="hHR-gK-Q4U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zHj-VM-63K"/>
                     </view>
                     <navigationItem key="navigationItem" id="SkK-V7-HMT"/>
                     <connections>
+                        <outlet property="imageView_Siegma" destination="PFh-Lj-JFO" id="qMU-AL-04d"/>
                         <outlet property="webView" destination="n8R-lC-nlM" id="8uw-SB-8KQ"/>
                         <segue destination="oto-Iq-apd" kind="show" identifier="NoInternet" id="i44-7x-yBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="429"/>
+            <point key="canvasLocation" x="2176.8000000000002" y="412.3152709359606"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image-1" width="200" height="200"/>
+        <image name="siegma" width="500" height="500"/>
     </resources>
 </document>

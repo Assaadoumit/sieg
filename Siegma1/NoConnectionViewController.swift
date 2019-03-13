@@ -20,20 +20,25 @@ class NoConnectionViewController: UIViewController {
     }
     
     @IBAction func TryAgain(_ sender: Any) {
-//        performSegue(withIdentifier: "TryAgain", sender: nil)
+        
         if (currentReachabilityStatus != .notReachable ){
+////            self.performSegue(withIdentifier: "TryAgain", sender: nil)
+//            self.present(WebViewController(), animated: true, completion: nil)
+////            WebViewController().openWeb()
             performSegue(withIdentifier: "TryAgain", sender: nil)
-//            WebViewController().openWeb()
             print("connected to internet")
         }
         else{
             print("not connected to internet")
             OperationQueue.main.addOperation {
-//          self.performSegue(withIdentifier: "NoInternet" , sender: nil)
+            self.present(NoConnectionViewController(), animated: true, completion: nil)
             super.viewDidAppear(true)
             }
+
+            
+        }
         }
     }
-}
+
 
 

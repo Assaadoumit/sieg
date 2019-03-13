@@ -14,26 +14,23 @@ import Reachability
 import SystemConfiguration
 import UserNotifications
 import NotificationCenter
+import WebKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
     
     
-    //let network: NetworkManager = NetworkManager.sharedInstance
-    
-    
-    
+    @IBOutlet weak var imageView_Siegma: UIView!
     @IBOutlet weak var webView: UIWebView!
+    var loadOnce : Bool = false
+    var safeAreaInsets: UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
     override func viewDidLoad() {
-        
-        
         print(currentReachabilityStatus != .notReachable) //true connected
-        
+        webView.delegate = self
         openWeb()
         NotificationCenter.default.addObserver(self, selector: #selector(receivedUrlFromPushNotification(notification: )), name: NSNotification.Name(rawValue: "ReceivedPushNotification"), object: nil)
-        //-------------------
-        
-        
-        
         if (currentReachabilityStatus != .notReachable ){
 //            openWeb(wurl: "https://www.siegma.com")
             print("connected to internet")
@@ -45,7 +42,29 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             }
         }
     }
+    //activate view
     
+            func webViewDidStartLoad(_ webView: UIWebView) {
+                if loadOnce == false{
+                print("Activity indicator start")
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                self.imageView_Siegma.isHidden = false
+                loadOnce = true
+                print(loadOnce)
+            }
+    }
+            /// dismiss view
+            func webViewDidFinishLoad(_ webView: UIWebView) {
+                
+                self.imageView_Siegma.isHidden = true
+                print("Activity indicator stop")
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                loadOnce = true
+                print(loadOnce)
+            }
+    
+    
+
     @objc func receivedUrlFromPushNotification(notification: NSNotification){
         
         let JSONData = notification.object as! [String:Any]
@@ -54,12 +73,14 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         
     }
     
+    
 
     @objc public func openWeb(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         var urlString = appDelegate.myUrl
         if urlString == "" {
-            urlString = "https://www.siegma.com"
+            urlString = "https://store.siegma.com/"
+            loadOnce = true
         }
         let url = URL(string: urlString)
         let request = URLRequest(url: url!)
@@ -94,9 +115,15 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         if prefs.value(forKey: "Link") != nil{
             let userInfo: [AnyHashable: Any] = ["inactive": "inactive"]
             NotificationCenter.default.post(name: Notification.Name(rawValue: "Link"), object: nil, userInfo: userInfo as [AnyHashable: Any])
+            
         }
         
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     
 }
 
