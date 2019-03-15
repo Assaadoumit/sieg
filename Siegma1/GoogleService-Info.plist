@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>275207750961-iipgchnqttmmm3g9d2q9js1f8o52bbut.apps.googleusercontent.com</string>
+	<string>1022235992189-lqromro2jt8lnk3i4cr4irhjdcmt6j8k.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.275207750961-iipgchnqttmmm3g9d2q9js1f8o52bbut</string>
+	<string>com.googleusercontent.apps.1022235992189-lqromro2jt8lnk3i4cr4irhjdcmt6j8k</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAflLlNhFZPrq8ZakvPYC_SJu7z3woA99w</string>
+	<string>AIzaSyARLxjuk5zswKeo8UjQbjE5X-W3H6hR7wE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>275207750961</string>
+	<string>1022235992189</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.assaad.Siegma1</string>
+	<string>com.Siegma.Siegma1</string>
 	<key>PROJECT_ID</key>
-	<string>siegma1-87e30</string>
+	<string>siegma1</string>
 	<key>STORAGE_BUCKET</key>
-	<string>siegma1-87e30.appspot.com</string>
+	<string>siegma1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:275207750961:ios:b2c37f388b8c087a</string>
+	<string>1:1022235992189:ios:6bb5ddd98e74113c</string>
 	<key>DATABASE_URL</key>
-	<string>https://siegma1-87e30.firebaseio.com</string>
+	<string>https://siegma1.firebaseio.com</string>
 </dict>
 </plist>

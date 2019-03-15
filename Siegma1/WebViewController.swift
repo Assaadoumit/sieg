@@ -14,7 +14,7 @@ import Reachability
 import SystemConfiguration
 import UserNotifications
 import NotificationCenter
-import WebKit
+
 
 class WebViewController: UIViewController, UIWebViewDelegate {
     

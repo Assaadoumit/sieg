@@ -19,31 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-cN-DND">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="siegma" translatesAutoresizingMaskIntoConstraints="NO" id="c4s-ju-PHA">
-                                        <rect key="frame" x="12" y="209" width="350" height="350"/>
+                                        <rect key="frame" x="15" y="211.66666666666663" width="345" height="345"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="384" id="G3R-Th-PqH"/>
-                                            <constraint firstAttribute="width" constant="350" id="oLL-Rr-Yat"/>
+                                            <constraint firstAttribute="width" constant="345" id="i3T-IW-tWk"/>
+                                            <constraint firstAttribute="height" constant="345" id="xSN-mb-0kW"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="c4s-ju-PHA" secondAttribute="trailing" constant="5" id="3zf-aI-Yee"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="c4s-ju-PHA" secondAttribute="bottom" constant="167" id="9Rr-nQ-hoK"/>
-                                    <constraint firstItem="c4s-ju-PHA" firstAttribute="top" secondItem="YZG-cN-DND" secondAttribute="topMargin" constant="201" id="l87-cc-F4w"/>
-                                    <constraint firstItem="c4s-ju-PHA" firstAttribute="leading" secondItem="YZG-cN-DND" secondAttribute="leadingMargin" constant="4" id="vzH-MR-WB0"/>
+                                    <constraint firstItem="c4s-ju-PHA" firstAttribute="centerY" secondItem="YZG-cN-DND" secondAttribute="centerY" id="7Kq-ye-pdR"/>
+                                    <constraint firstItem="c4s-ju-PHA" firstAttribute="centerX" secondItem="YZG-cN-DND" secondAttribute="centerX" id="R5X-Rt-IfE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="YZG-cN-DND" secondAttribute="bottom" id="Kni-dj-Ucx"/>
-                            <constraint firstItem="YZG-cN-DND" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="XYd-4P-Jxk"/>
-                            <constraint firstItem="YZG-cN-DND" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="oKN-CV-Zzz"/>
-                            <constraint firstItem="YZG-cN-DND" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="r15-b2-B12"/>
+                            <constraint firstAttribute="bottom" secondItem="YZG-cN-DND" secondAttribute="bottom" id="0Gn-Rm-oBo"/>
+                            <constraint firstItem="YZG-cN-DND" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="3Ak-lR-1YE"/>
+                            <constraint firstItem="YZG-cN-DND" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="LH4-AF-6Tl"/>
+                            <constraint firstItem="YZG-cN-DND" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="LKD-nF-Oaf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>

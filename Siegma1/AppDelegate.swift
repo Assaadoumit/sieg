@@ -18,26 +18,10 @@ import SwiftyJSON
 @UIApplicationMain
 
 
-class AppDelegate: UIResponder, UIApplicationDelegate, UIWebViewDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, UIWebViewDelegate {
     var window: UIWindow?
     var myUrl: String = ""
     let  gcmMessageIDKey = "gcm.message_id"
-    var myViewController: WebViewController!
-    
-    
-    
-//    func webViewDidStartLoad(_ webView: UIWebView) {
-//        myViewController.webView.delegate = self
-//    self.myViewController.imageView_Siegma.isHidden = false
-//        print(" view activated")
-//    }
-//    
-//    func webViewDidFinishLoad(_ webView: UIWebView) {
-//        myViewController.webView.delegate = self
-//     self.myViewController.imageView_Siegma.isHidden = true
-//        print(" view diactivated")
-//    }
-
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -84,11 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWebViewDelegate{
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-         
-        
-        
         FirebaseApp.configure()
+        
+        
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
             UNUserNotificationCenter.current().delegate = self
